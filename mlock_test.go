@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Kimbbakar/mlock"
+	"github.com/kimbbakar/mlock"
 )
 
 var wg sync.WaitGroup

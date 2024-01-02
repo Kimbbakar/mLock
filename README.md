@@ -1,5 +1,8 @@
 # mLock
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/Kimbbakar/mlock)](https://goreportcard.com/report/github.com/Kimbbakar/mlock)
+[![GoDoc](https://pkg.go.dev/badge/github.com/Kimbbakar/mlock?status.svg)](https://pkg.go.dev/github.com/Kimbbakar/mlock?tab=doc)
+
 `mlock` empowers users to enforce locks on the same critical section based on different types, providing a flexible and effective way to control access and maintain concurrency in diverse scenarios.
 
 ## Features
