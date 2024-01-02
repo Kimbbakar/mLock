@@ -64,7 +64,7 @@ func Lock(keys ...interface{}) {
 	lDetails.lck.Lock()
 }
 
-func UnLock(keys ...interface{}) {
+func Unlock(keys ...interface{}) {
 	uKey := getKey(keys)
 	lDetails := getLock(uKey)
 	if lDetails == nil {

@@ -56,7 +56,7 @@ func testFunc(lockCount, concurrentReq int) {
 func jobFunc(i, j int) {
 	time.Sleep(time.Second * time.Duration(rand.Intn(2)+1))
 	mlock.Lock(i)
-	defer mlock.UnLock(i)
+	defer mlock.Unlock(i)
 	count[i] += 1
 	wg.Done()
 }
