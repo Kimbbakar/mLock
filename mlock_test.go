@@ -26,7 +26,7 @@ func TestYourFunction(t *testing.T) {
 		{1000, 100000, 100000},
 	}
 
-	d := time.Second * 2
+	d := time.Millisecond * 1
 	mlock.KeepClean(&d)
 
 	for _, tc := range testCases {

@@ -2,7 +2,6 @@ package mlock
 
 import (
 	"fmt"
-	"log"
 	"strings"
 	"sync"
 	"sync/atomic"
@@ -33,7 +32,6 @@ func KeepClean(intervalInMinute *time.Duration) {
 		}
 
 		go func() {
-			defer log.Println("I'm closing")
 			ticker := time.NewTicker(cleanInterval)
 			for {
 				<-ticker.C
@@ -43,6 +41,7 @@ func KeepClean(intervalInMinute *time.Duration) {
 
 					mLock.l.Range(func(key, value any) bool {
 						ld := value.(*lockDetails)
+
 						if ld.c == 0 {
 							mLock.l.Delete(key)
 						}
@@ -70,8 +69,9 @@ func Unlock(keys ...interface{}) {
 	if lDetails == nil {
 		return
 	}
-	atomic.AddInt64(&lDetails.c, -1)
+
 	lDetails.lck.Unlock()
+	atomic.AddInt64(&lDetails.c, -1)
 }
 
 func getOrStoreLock(key string) *lockDetails {
