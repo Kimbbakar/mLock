@@ -22,7 +22,7 @@ go get -u github.com/Kimbbakar/mlock
 
 #### Importing the Package
 ```go
-import "github.com/yourusername/mlock"
+import "github.com/kimbbakar/mlock"
 ```
 
 #### Initializing and Cleaning Up Locks
@@ -47,7 +47,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/yourusername/mlock"
+	"github.com/kimbbakar/mlock"
 	"time"
 )
 
