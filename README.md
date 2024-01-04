@@ -15,7 +15,7 @@
 To use `mlock` in your Golang project, you can simply run:
 
 ```bash
-go get -u github.com/Kimbbakar/mlock
+go get -u github.com/kimbbakar/mlock
 ```
 
 ## Usage
@@ -47,8 +47,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/kimbbakar/mlock"
 	"time"
+
+	"github.com/kimbbakar/mlock"
 )
 
 func main() {
@@ -65,7 +66,7 @@ func main() {
 }
 ```
 
-#### Contribution
+# Contribution
 Contributions are welcome! If you find any issues or have suggestions for improvement, feel free to open an issue or create a pull request.
 
 # License
