@@ -13,7 +13,7 @@ import (
 var wg sync.WaitGroup
 var count [10000]int
 
-func TestYourFunction(t *testing.T) {
+func TestMLock(t *testing.T) {
 	testCases := []struct {
 		input1 int
 		input2 int
